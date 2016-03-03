@@ -33,8 +33,9 @@
     
     // INITIALIZE A NEW CLASS AND GET ACCESS TO GLOBAL VARIABLES
     Person *personOne = [[Person alloc] init];
-    personOne.firstName = @"Sergey";
+    personOne.firstName = @"Oleg";
     [personOne setLastName: @"Melentyev"];
+    NSLog(@"%@", personOne.firstName);
     
     
     

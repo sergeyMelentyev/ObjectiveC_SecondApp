@@ -15,4 +15,13 @@
     isInsecure = FALSE;
 }
 
+// CUSTOM SETTER OVERRIDE
+-(NSString*) firstName {
+    if ([_firstName isEqualToString: @"Sergey"]) {
+        return _firstName;
+    } else {
+        return @"Example of custom data hiding";
+    }
+}
+
 @end

@@ -13,7 +13,7 @@
     BOOL isInsecure;
 }
 
-// DECLARE AN EXTERNAL VARIABLES AND METHODS
+// DECLARE AN EXTERNAL VAR WILL CREATE AN INSTANCE VAR / A GETTER / A SETTER
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
 @end
