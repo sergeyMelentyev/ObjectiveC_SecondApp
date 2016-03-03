@@ -37,6 +37,31 @@
     [personOne setLastName: @"Melentyev"];
     NSLog(@"%@", personOne.firstName);
     
+    // NSSTRING FORMATE
+    NSString *firstName = @"Sergey";
+    NSString *lastName = @"Melentyev";
+    NSString *fullName = [NSString stringWithFormat: @"%@ %@", firstName, lastName];
+    NSString *prof = [fullName stringByAppendingString: @" - iOS Developer"];
+    NSLog(@"%@", prof);
+    if ([firstName isEqualToString: lastName]) {
+        NSLog(@"Strings are the same");
+    } else if ([firstName caseInsensitiveCompare: lastName] == NSOrderedSame) {
+        NSLog(@"String are the same");
+    } else if ([firstName.lowercaseString isEqualToString: lastName]) {
+        NSLog(@"String are the same");
+    } else {
+        NSLog(@"String are not the same");
+    }
+    
+    // NSNUMBER FORMATE
+    NSNumber *firstNum = [NSNumber numberWithInt: 5];
+    NSNumber *secondNum = [NSNumber numberWithInt: 6];
+    int x = firstNum.intValue;
+    int y = secondNum.intValue;
+    int sum = x + y;
+    NSNumber *numSum = [NSNumber numberWithInt: sum];
+    NSLog(@"%d", numSum.intValue);
+    
     
     
 }
