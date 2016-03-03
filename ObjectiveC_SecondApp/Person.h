@@ -16,4 +16,7 @@
 // DECLARE AN EXTERNAL VAR WILL CREATE AN INSTANCE VAR / A GETTER / A SETTER
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
+// POINTER * ONLY BEFORE OBJECTS
+@property (nonatomic) int age;
+@property (nonatomic) NSInteger account;
 @end
