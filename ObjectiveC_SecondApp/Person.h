@@ -19,4 +19,9 @@
 // POINTER * ONLY BEFORE OBJECTS
 @property (nonatomic) int age;
 @property (nonatomic) NSInteger account;
+
+// CLASS FUNCTION YOU HAVE TO CALL IT IN ORDER TO HAVE IT
+-(void) speakName;
+// STATIC OR TYPED FUNCTION WILL BE IN ANY OBJECT
++(void) stateSpecies;
 @end

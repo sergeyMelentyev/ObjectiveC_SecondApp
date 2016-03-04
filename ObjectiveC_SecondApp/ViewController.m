@@ -74,15 +74,25 @@
     else
         return NO;
 }
--(void) anyFunctionName {
-    if ([self canPurchase: self.itemAmount]) {
-        NSLog(@"We can buy it");
-    }
+// CORRECT FUNCTION NAME WITH TWO ARGUMENTS
+-(void) declareWinnerWithPlayerAScore: (NSInteger) scoreA playerBScore: (NSInteger) scoreB {
+    if (scoreA > scoreB)
+        NSLog(@"Player A is a winner");
 }
-
-
-
-
+// FUNCTION CALL WITH ARGUMENT
+-(void) anyFunctionName {
+    if ([self canPurchase: self.itemAmount])
+        NSLog(@"We can buy it");
+    [self declareWinnerWithPlayerAScore:55 playerBScore:66];
+    
+    Person *newPersonA = [[Person alloc] init];
+    [newPersonA speakName];                                 // CALL STATIC FUNCTION
+    [Person stateSpecies];                                  // CALL CLASS FUNCTION
+    
+    // ВЛОЖЕННЫЕ ВЫЗОВЫ ФУНКЦИЙ
+    UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL: [NSURL URLWithString: @"http://ya.ru"]]];
+    
+}
 
 
 
