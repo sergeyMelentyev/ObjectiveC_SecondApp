@@ -11,9 +11,9 @@
 
 // DECLARE LOCAL VARIABLES AND METHODS
 @interface ViewController ()
-
 @property (nonatomic, strong) NSString *localString;
-
+@property (nonatomic) double bankAccount;
+@property (nonatomic) double itemAmount;
 @end
 
 @implementation ViewController
@@ -62,9 +62,24 @@
     NSNumber *numSum = [NSNumber numberWithInt: sum];
     NSLog(@"%d", numSum.intValue);
     
-    
-    
+    // INIT LOCAL VARIABLES
+    self.bankAccount = 500.50;
+    self.itemAmount = 400.00;
 }
+
+// FUNCTION THAT WILL RETURN BOOL AND TAKE ONE ARGUMENT OF TYPE DOUBLE
+-(BOOL) canPurchase: (double) amount {
+    if (self.bankAccount >= amount)
+        return YES;
+    else
+        return NO;
+}
+-(void) anyFunctionName {
+    if ([self canPurchase: self.itemAmount]) {
+        NSLog(@"We can buy it");
+    }
+}
+
 
 
 
