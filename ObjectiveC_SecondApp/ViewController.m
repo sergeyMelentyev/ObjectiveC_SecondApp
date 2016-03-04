@@ -80,6 +80,20 @@
     NSLog(@"%@", arrMutable);
     [arrMutable addObject:@"One"];
     NSLog(@"%@", arrMutable);
+    
+    // NSDICTIONARY IS A CONSTANT DATA TYPE, FILL WITH OBJECTS AT INIT STAGE
+    NSNumber *ageDictOne = [NSNumber numberWithInt: 33];
+    NSDictionary *dictOne = @{@"FirstKey": @"FirstValue", @"SecondKey": ageDictOne};
+    // GET INT VALUE FROM NSDICTIONARY
+    int intNumber = [[dictOne objectForKey:@"SecondKey"] intValue];
+    NSLog(@"%d", intNumber);
+    
+    //NSMUTABLEDICTIONARY, CAN BE MODIFIED LATER ON
+    NSMutableDictionary *dictTwo = [@{@"FirstKey": @"FirstValue", @"SecondKey": @"SecondValue"} mutableCopy];
+    NSMutableDictionary *dictThree = [[NSMutableDictionary alloc] init];
+    [dictThree setObject:@"AnyObj" forKey:@"AnyKey"];
+    NSLog(@"%@ %@", dictTwo, dictThree);
+    
 }
 
 // FUNCTION THAT WILL RETURN BOOL AND TAKE ONE ARGUMENT OF TYPE DOUBLE
