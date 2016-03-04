@@ -65,6 +65,21 @@
     // INIT LOCAL VARIABLES
     self.bankAccount = 500.50;
     self.itemAmount = 400.00;
+    
+    // NSARRAY IS A CONSTANT DATA TYPE, FILL WITH OBJECTS AT INIT STAGE
+    NSArray *arrConstant = [NSArray arrayWithObjects:@"One", @"Two", @"Three", nil];
+    NSLog(@"%@", arrConstant);
+    // NSARRAY LITERAL INIT
+    NSArray *arrConstLit = @[@"One", @"Two", @"Three"];
+    // GET SECOND OBJECT FROM ARRAY
+    NSString *strFromArr = [arrConstLit objectAtIndex: 1];
+    NSLog(@"%@ %@", arrConstLit, strFromArr);
+    
+    // NSMUTABLEARRAY, CAN BE MODIFIED LATER ON
+    NSMutableArray *arrMutable = [[NSMutableArray alloc] init];
+    NSLog(@"%@", arrMutable);
+    [arrMutable addObject:@"One"];
+    NSLog(@"%@", arrMutable);
 }
 
 // FUNCTION THAT WILL RETURN BOOL AND TAKE ONE ARGUMENT OF TYPE DOUBLE
