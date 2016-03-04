@@ -24,11 +24,11 @@
     }
 }
 
-// IMPLEMENT A STATIC FUNCTION
+// IMPLEMENT A CLASS FUNCTION
 -(void) speakName {
     NSLog(@"My name is Sergey");
 }
-// IMPLEMENT A CLASS FUNCTION
+// IMPLEMENT A STATIC FUNCTION
 +(void) stateSpecies {
     NSLog(@"I ma a human");
 }

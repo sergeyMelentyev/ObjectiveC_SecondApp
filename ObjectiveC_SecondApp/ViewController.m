@@ -89,9 +89,15 @@
     [newPersonA speakName];                                 // CALL STATIC FUNCTION
     [Person stateSpecies];                                  // CALL CLASS FUNCTION
     
-    // ВЛОЖЕННЫЕ ВЫЗОВЫ ФУНКЦИЙ
-    UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL: [NSURL URLWithString: @"http://ya.ru"]]];
-    
+    // ВЛОЖЕННЫЕ ВЫЗОВЫ STATIC ФУНКЦИЙ
+    UIImage *imageOne;
+    imageOne = [UIImage imageWithData: [NSData dataWithContentsOfURL: [NSURL URLWithString: @""]]];
+    // АЛЬТЕРНАТИВА
+    UIImage *imageTwo;
+    NSString *str = @"";
+    NSURL *url = [NSURL URLWithString: str];
+    NSData *data = [NSData dataWithContentsOfURL: url];
+    imageTwo = [UIImage imageWithData: data];
 }
 
 
