@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Person.h"
+#import "MySelf.h"
 
 // DECLARE LOCAL VARIABLES AND METHODS
 @interface ViewController ()
@@ -94,6 +95,9 @@
     [dictThree setObject:@"AnyObj" forKey:@"AnyKey"];
     NSLog(@"%@ %@", dictTwo, dictThree);
     
+    //
+    MySelf *callSuperClass = [[MySelf alloc] init];
+    NSLog(@"%@", callSuperClass);
 }
 
 // FUNCTION THAT WILL RETURN BOOL AND TAKE ONE ARGUMENT OF TYPE DOUBLE
@@ -115,13 +119,13 @@
     [self declareWinnerWithPlayerAScore:55 playerBScore:66];
     
     Person *newPersonA = [[Person alloc] init];
-    [newPersonA speakName];                                 // CALL STATIC FUNCTION
-    [Person stateSpecies];                                  // CALL CLASS FUNCTION
+    [newPersonA speakName];                                 // CALL -STATIC FUNCTION
+    [Person stateSpecies];                                  // CALL +CLASS FUNCTION
     
     // ВЛОЖЕННЫЕ ВЫЗОВЫ STATIC ФУНКЦИЙ
     UIImage *imageOne;
     imageOne = [UIImage imageWithData: [NSData dataWithContentsOfURL: [NSURL URLWithString: @""]]];
-    // АЛЬТЕРНАТИВА
+    // STEP BY STEP
     UIImage *imageTwo;
     NSString *str = @"";
     NSURL *url = [NSURL URLWithString: str];

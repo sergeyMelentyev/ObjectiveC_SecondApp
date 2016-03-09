@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-// DECLARE AN INSTANCE VARIABLES
+// DECLARE AN INSTANCE (LOCAL) VARIABLES
 @interface Person : NSObject {
     BOOL isInsecure;
 }

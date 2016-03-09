@@ -16,7 +16,7 @@
 }
 
 // CUSTOM SETTER OVERRIDE
--(NSString*) firstName {
+-(NSString *) firstName {
     if ([_firstName isEqualToString: @"Sergey"]) {
         return _firstName;
     } else {
@@ -30,7 +30,7 @@
 }
 // IMPLEMENT A STATIC FUNCTION
 +(void) stateSpecies {
-    NSLog(@"I ma a human");
+    NSLog(@"I am a human");
 }
 
 
